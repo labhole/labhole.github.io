@@ -1,8 +1,10 @@
+<p align="center">
+  <img src="android-chrome-192x192.png" alt="Labhole logo" width="192" height="192">
+</p>
+
 # Labhole
 
-Labhole is a science-ethics advocacy site that promotes ethics, respect, and
-morals in science and research environments. The tagline says it all: *"Don't
-be a labhole. Have morals."*
+*"Don't be a labhole. Have morals."*
 
 The site is live at [labhole.github.io](https://labhole.github.io).
 
@@ -96,10 +98,8 @@ labhole.github.io/
     (`labhole.fyi`), tagline, description, kramdown settings with GFM input,
     base URL for GitHub Pages, `pretty` permalink style, and the list of files
     excluded from the build.
-
 * **`Gemfile`** — Declares the `github-pages` gem as the sole Ruby dependency,
     ensuring local builds match the GitHub Pages environment exactly.
-
 * **`_layouts/default.html`** — The HTML5 page template. Features include:
     * A **skip-navigation link** (`Skip to main content`) for keyboard and
         screen-reader accessibility.
@@ -112,27 +112,19 @@ labhole.github.io/
         `aria-current="page"` attribute and a filled accent background via CSS.
     * A centered **single-column main content area**. There is no header banner
         or footer.
-
 * **`css/style.css`** — The complete custom dark-mode theme. Defines CSS custom
     properties for the color palette, self-hosted Montserrat `@font-face`
     declarations, a responsive layout (max width of **860px**), styled elements
     (blockquotes, code blocks, tables, lists, horizontal rules, images), and a
     mobile breakpoint at 600px.
-
 * **`css/fonts/`** — Self-hosted Montserrat font files in `.woff2` format.
     Five weights/styles are included (300, 400, 400 italic, 600, 700).
-
 * **`index.md`** — The home page. Uses the `default` layout.
-
 * **`conduct.md`** — Code of Conduct page. Uses the `default` layout.
-
 * **`letter.md`** — Open Letter page. Uses the `default` layout.
-
 * **`aspiring_researchers.md`** — Aspiring Researchers page. Uses the `default`
     layout.
-
 * **`support.md`** — Show Your Support page. Uses the `default` layout.
-
 * **`scripts/serve.sh`** — A Bash helper script that checks for Ruby and
     Bundler, installs dependencies into `vendor/bundle`, and starts the Jekyll
     development server bound to `0.0.0.0` (useful for WSL). Accepts extra
