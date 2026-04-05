@@ -11,4 +11,6 @@ layout: default
 -----
 
 > *If you are a scientific researcher and wish to help advocate this mindset shift, please feel free to submit suggestions and changes to this open letter (or other parts of this website) on [our GitHub repository](https://github.com/labhole/labhole.github.io).*
+>
+> Additionally, please feel free to reach out at [contact@labhole.fyi](mailto:contact@labhole.fyi).
 
