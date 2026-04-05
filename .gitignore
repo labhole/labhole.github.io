@@ -4,8 +4,6 @@ _site/
 .bundle/
 vendor/
 
-Gemfile.lock
-
 *.swp
 *.swo
 *.swn

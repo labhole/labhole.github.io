@@ -2,7 +2,6 @@
 layout: default
 ---
 
-# Don't be a labhole.
+# Show Your Support
 
 *(Under construction)*
-

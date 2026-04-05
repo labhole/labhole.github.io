@@ -11,6 +11,9 @@
 
   <title>{{ site.title }}</title>
 
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔬</text></svg>">
+
   <!-- Custom stylesheet -->
   <link rel="stylesheet" href="{{ "/css/style.css" | relative_url }}">
 </head>
@@ -20,9 +23,14 @@
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <!-- =============================== NAV ================================ -->
-  <nav class="site-nav" role="navigation" aria-label="Main navigation">
-    <a class="nav-btn" href="{{ "/" | relative_url }}">Home</a>
-    <a class="nav-btn" href="{{ "/evaluation/" | relative_url }}">Evaluation</a>
+  <nav class="site-nav" aria-label="Main navigation">
+    <ul class="nav-list">
+      <li><a class="nav-btn" href="{{ "/" | relative_url }}" {% if page.url == "/" %}aria-current="page"{% endif %}>Home</a></li>
+      <li><a class="nav-btn" href="{{ "/conduct/" | relative_url }}" {% if page.url == "/conduct/" %}aria-current="page"{% endif %}>Code of Conduct</a></li>
+      <li><a class="nav-btn" href="{{ "/letter/" | relative_url }}" {% if page.url == "/letter/" %}aria-current="page"{% endif %}>Open Letter</a></li>
+      <li><a class="nav-btn" href="{{ "/aspiring_researchers/" | relative_url }}" {% if page.url == "/aspiring_researchers/" %}aria-current="page"{% endif %}>Aspiring Researchers</a></li>
+      <li><a class="nav-btn" href="{{ "/support/" | relative_url }}" {% if page.url == "/support/" %}aria-current="page"{% endif %}>Show Your Support</a></li>
+    </ul>
   </nav>
 
   <!-- ============================== MAIN ================================ -->

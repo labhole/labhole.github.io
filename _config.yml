@@ -36,3 +36,4 @@ exclude:
   - LICENSE
   - vendor
   - scripts
+  - .gitignore

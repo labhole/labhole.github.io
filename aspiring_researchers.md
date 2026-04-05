@@ -2,7 +2,6 @@
 layout: default
 ---
 
-# Don't be a labhole.
+# Aspiring Researchers
 
 *(Under construction)*
-

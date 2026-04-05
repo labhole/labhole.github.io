@@ -2,7 +2,6 @@
 layout: default
 ---
 
-# Don't be a labhole.
+# Code of Conduct
 
 *(Under construction)*
-
