@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Home
+title: ""
 ---
 
-# Labhole
+# Don't be a labhole.
 
 TODO - Update
 

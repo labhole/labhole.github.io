@@ -6,11 +6,11 @@
 # =============================================================================
 
 # ---- Site metadata --------------------------------------------------------
-title: "Labhole"
-tagline: "Advocating for ethics in scientific research"
+title: "labhole.fyi"
+tagline: "Don't be a labhole. Have morals."
 description: >-
-  Advocating for ethics, respect, and morals in science and research
-  environments. Don't be a labhole.
+  Advocating for ethics, respect, and morals in science and research environments.
+  Don't be a labhole.
 author: "Labhole"
 
 # ---- Build settings -------------------------------------------------------
@@ -34,3 +34,4 @@ exclude:
   - Gemfile.lock
   - README.md
   - LICENSE
+  - vendor

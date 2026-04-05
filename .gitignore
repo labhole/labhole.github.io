@@ -3,3 +3,9 @@ _site/
 .jekyll-metadata
 .bundle/
 vendor/
+
+Gemfile.lock
+
+*.swp
+*.swo
+*.swn

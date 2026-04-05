@@ -1,24 +1,30 @@
 /* =========================================================================
-   Labhole — Custom Theme Stylesheet
+   Labhole — Custom Theme Stylesheet (Dark Mode)
    =========================================================================
-   A minimal, clean design for a science-ethics advocacy site.
+   A minimal, single-panel dark design for a science-ethics advocacy site.
 
-   Color Palette
-   ─────────────
-   Muted green   : #557E73  — header background, accents
-   Very dark green: #1D1A05  — body text, footer background
-   Very dark brown: #211103  — headings, emphasis, secondary text
-   Parchment     : #FBF7F4  — page background
-   Toffee brown  : #8F5A30  — links, interactive elements
+   Color Palette (Dark Mode)
+   ─────────────────────────
+   Very dark brown: #211103  — page background
+   Parchment      : #FBF7F4  — body text (muted to #E8E0DA for comfort)
+   Muted green    : #557E73  — accents (borders, hr, blockquotes)
+   Light green    : #659389  — headings (brightened for AA contrast)
+   Toffee brown   : #C4793E  — links (lightened from #8F5A30 for contrast)
+   Very dark green: #1D1A05  — secondary dark (code blocks)
    ========================================================================= */
 
 /* ── CSS Custom Properties ─────────────────────────────────────────────── */
 :root {
-  --color-green-light:  #557E73;
-  --color-green-dark:   #1D1A05;
-  --color-brown-dark:   #211103;
-  --color-parchment:    #FBF7F4;
-  --color-toffee:       #8F5A30;
+  --color-bg:           #211103;
+  --color-text:         #E8E0DA;
+  --color-heading:      #659389;
+  --color-accent:       #557E73;
+  --color-link:         #C4793E;
+  --color-link-hover:   #E8E0DA;
+  --color-code-bg:      #2C1E10;
+  --color-pre-bg:       #1D1A05;
+  --color-pre-text:     #E8E0DA;
+  --color-strong:       #FBF7F4;
 
   --font-body: "Georgia", "Times New Roman", "Palatino Linotype", serif;
   --font-heading: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
@@ -46,45 +52,10 @@ body {
   font-family: var(--font-body);
   font-size: 1.125rem;          /* 18px for comfortable reading */
   line-height: 1.7;
-  color: var(--color-green-dark);
-  background-color: var(--color-parchment);
+  color: var(--color-text);
+  background-color: var(--color-bg);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-/* ── Header ────────────────────────────────────────────────────────────── */
-.site-header {
-  background-color: var(--color-green-light);
-  padding: 2.5rem var(--spacing);
-  text-align: center;
-}
-
-.header-content {
-  max-width: var(--max-width);
-  margin: 0 auto;
-}
-
-.site-title {
-  font-family: var(--font-heading);
-  font-size: 2.5rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  margin-bottom: 0.25rem;
-}
-
-.site-title a {
-  color: #FFFFFF;
-  text-decoration: none;
-}
-
-.site-title a:hover {
-  color: var(--color-parchment);
-}
-
-.site-tagline {
-  font-size: 1.1rem;
-  font-style: italic;
-  color: #FFFFFF;
 }
 
 /* ── Main Content Area ─────────────────────────────────────────────────── */
@@ -97,14 +68,14 @@ body {
 /* ── Typography — Headings ─────────────────────────────────────────────── */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
-  color: var(--color-brown-dark);
+  color: var(--color-heading);
   line-height: 1.3;
   margin-top: 2rem;
   margin-bottom: 0.75rem;
 }
 
 h1 { font-size: 2rem;   }
-h2 { font-size: 1.65rem; border-bottom: 2px solid var(--color-green-light); padding-bottom: 0.3rem; }
+h2 { font-size: 1.65rem; border-bottom: 2px solid var(--color-accent); padding-bottom: 0.3rem; }
 h3 { font-size: 1.35rem; }
 h4 { font-size: 1.15rem; }
 h5 { font-size: 1rem;    }
@@ -116,7 +87,7 @@ p {
 }
 
 strong {
-  color: var(--color-brown-dark);
+  color: var(--color-strong);
 }
 
 em {
@@ -125,7 +96,7 @@ em {
 
 /* ── Links ─────────────────────────────────────────────────────────────── */
 a {
-  color: var(--color-toffee);
+  color: var(--color-link);
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 2px;
@@ -134,11 +105,11 @@ a {
 
 a:hover,
 a:focus {
-  color: var(--color-brown-dark);
+  color: var(--color-link-hover);
 }
 
 a:focus-visible {
-  outline: 2px solid var(--color-toffee);
+  outline: 2px solid var(--color-link);
   outline-offset: 2px;
 }
 
@@ -160,11 +131,11 @@ li > ol {
 
 /* ── Blockquotes ───────────────────────────────────────────────────────── */
 blockquote {
-  border-left: 4px solid var(--color-green-light);
+  border-left: 4px solid var(--color-accent);
   margin: 1.5rem 0;
   padding: 0.75rem 1.25rem;
-  background-color: rgba(85, 126, 115, 0.08);  /* subtle green tint */
-  color: var(--color-brown-dark);
+  background-color: rgba(85, 126, 115, 0.1);   /* subtle green tint */
+  color: var(--color-text);
   font-style: italic;
 }
 
@@ -176,8 +147,8 @@ blockquote p:last-child {
 code {
   font-family: var(--font-mono);
   font-size: 0.88em;
-  background-color: rgba(85, 126, 115, 0.12);  /* light green wash */
-  color: var(--color-brown-dark);
+  background-color: var(--color-code-bg);
+  color: var(--color-text);
   padding: 0.15em 0.35em;
   border-radius: 3px;
 }
@@ -186,8 +157,8 @@ pre {
   margin: 1.5rem 0;
   padding: 1.25rem;
   overflow-x: auto;
-  background-color: var(--color-green-dark);
-  color: var(--color-parchment);
+  background-color: var(--color-pre-bg);
+  color: var(--color-pre-text);
   border-radius: 6px;
   line-height: 1.5;
 }
@@ -202,7 +173,7 @@ pre code {
 /* ── Horizontal Rules ──────────────────────────────────────────────────── */
 hr {
   border: none;
-  border-top: 2px solid var(--color-green-light);
+  border-top: 2px solid var(--color-accent);
   margin: 2rem 0;
 }
 
@@ -229,30 +200,9 @@ th, td {
 th {
   font-family: var(--font-heading);
   font-weight: 600;
-  color: var(--color-brown-dark);
+  color: var(--color-heading);
   border-bottom-width: 2px;
-  border-bottom-color: var(--color-green-light);
-}
-
-/* ── Footer ────────────────────────────────────────────────────────────── */
-.site-footer {
-  background-color: var(--color-green-dark);
-  color: var(--color-parchment);
-  text-align: center;
-  padding: 2rem var(--spacing);
-  margin-top: 3rem;
-  font-size: 0.9rem;
-}
-
-.footer-content {
-  max-width: var(--max-width);
-  margin: 0 auto;
-}
-
-.footer-tagline {
-  font-style: italic;
-  opacity: 0.75;
-  margin-top: 0.25rem;
+  border-bottom-color: var(--color-accent);
 }
 
 /* ── Skip Navigation Link ───────────────────────────────────────────── */
@@ -260,8 +210,8 @@ th {
   position: absolute;
   top: -100%;
   left: 0;
-  background: var(--color-green-dark);
-  color: var(--color-parchment);
+  background: var(--color-pre-bg);
+  color: var(--color-text);
   padding: 0.5rem 1rem;
   z-index: 100;
   text-decoration: none;
@@ -273,14 +223,6 @@ th {
 
 /* ── Responsive — Small Screens ────────────────────────────────────────── */
 @media (max-width: 600px) {
-  .site-title {
-    font-size: 1.8rem;
-  }
-
-  .site-tagline {
-    font-size: 0.95rem;
-  }
-
   .site-main {
     padding: 2rem 1rem;
   }

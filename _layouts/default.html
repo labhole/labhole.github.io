@@ -9,13 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="{{ page.description | default: site.description }}">
 
-  <title>
-    {%- if page.title -%}
-      {{ page.title }} · {{ site.title }}
-    {%- else -%}
-      {{ site.title }}
-    {%- endif -%}
-  </title>
+  <title>{{ site.title }}</title>
 
   <!-- Custom stylesheet -->
   <link rel="stylesheet" href="{{ "/css/style.css" | relative_url }}">
@@ -25,16 +19,6 @@
   <!-- ========================= SKIP NAVIGATION ========================= -->
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <!-- ============================== HEADER ============================== -->
-  <header class="site-header" role="banner">
-    <div class="header-content">
-      <h1 class="site-title">
-        <a href="{{ "/" | relative_url }}">{{ site.title }}</a>
-      </h1>
-      <p class="site-tagline">{{ site.tagline }}</p>
-    </div>
-  </header>
-
   <!-- ============================== MAIN ================================ -->
   <main class="site-main" id="main-content" role="main">
     <article class="page-content">
@@ -42,12 +26,5 @@
     </article>
   </main>
 
-  <!-- ============================== FOOTER ============================== -->
-  <footer class="site-footer" role="contentinfo">
-    <div class="footer-content">
-      <p>&copy; {{ "now" | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
-      <p class="footer-tagline">Science thrives when ethics lead the way.</p>
-    </div>
-  </footer>
 </body>
 </html>
