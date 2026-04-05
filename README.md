@@ -1,13 +1,5 @@
 # Labhole
 
-**Labhole** is a static website advocating for ethics, respect, and morals in
-science and research environments. It serves as a platform to promote healthy
-lab cultures, responsible conduct of research, and the courage to speak up when
-ethical standards are compromised.
-
-The site is hosted on [GitHub Pages](https://pages.github.com/) at
-**<https://labhole.github.io>**.
-
 ## How It's Built
 
 Labhole is built with [Jekyll](https://jekyllrb.com/), the static site
