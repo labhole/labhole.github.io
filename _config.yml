@@ -1,0 +1,36 @@
+# =============================================================================
+# Labhole — Jekyll Configuration
+# =============================================================================
+# A static GitHub Pages site advocating for ethics, respect, and morals
+# in science and research environments.
+# =============================================================================
+
+# ---- Site metadata --------------------------------------------------------
+title: "Labhole"
+tagline: "Advocating for ethics in scientific research"
+description: >-
+  Advocating for ethics, respect, and morals in science and research
+  environments. Don't be a labhole.
+author: "Labhole"
+
+# ---- Build settings -------------------------------------------------------
+markdown: kramdown
+kramdown:
+  input: GFM                # GitHub-Flavored Markdown for familiarity
+  hard_wrap: false
+
+# ---- URL configuration ----------------------------------------------------
+# For a GitHub Pages user/org site (username.github.io), baseurl should be
+# empty and url should be the full domain.
+url: "https://labhole.github.io"
+baseurl: ""
+
+# ---- Permalink style -------------------------------------------------------
+permalink: pretty
+
+# ---- Files to exclude from the build --------------------------------------
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE

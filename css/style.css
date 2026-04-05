@@ -1,0 +1,300 @@
+/* =========================================================================
+   Labhole — Custom Theme Stylesheet
+   =========================================================================
+   A minimal, clean design for a science-ethics advocacy site.
+
+   Color Palette
+   ─────────────
+   Muted green   : #557E73  — header background, accents
+   Very dark green: #1D1A05  — body text, footer background
+   Very dark brown: #211103  — headings, emphasis, secondary text
+   Parchment     : #FBF7F4  — page background
+   Toffee brown  : #8F5A30  — links, interactive elements
+   ========================================================================= */
+
+/* ── CSS Custom Properties ─────────────────────────────────────────────── */
+:root {
+  --color-green-light:  #557E73;
+  --color-green-dark:   #1D1A05;
+  --color-brown-dark:   #211103;
+  --color-parchment:    #FBF7F4;
+  --color-toffee:       #8F5A30;
+
+  --font-body: "Georgia", "Times New Roman", "Palatino Linotype", serif;
+  --font-heading: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "SFMono-Regular", "Consolas", "Liberation Mono", "Menlo", monospace;
+
+  --max-width: 740px;
+  --spacing: 1.5rem;
+}
+
+/* ── Reset & Base ──────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%;              /* 16px baseline */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1.125rem;          /* 18px for comfortable reading */
+  line-height: 1.7;
+  color: var(--color-green-dark);
+  background-color: var(--color-parchment);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Header ────────────────────────────────────────────────────────────── */
+.site-header {
+  background-color: var(--color-green-light);
+  padding: 2.5rem var(--spacing);
+  text-align: center;
+}
+
+.header-content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.site-title {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.25rem;
+}
+
+.site-title a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.site-title a:hover {
+  color: var(--color-parchment);
+}
+
+.site-tagline {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #FFFFFF;
+}
+
+/* ── Main Content Area ─────────────────────────────────────────────────── */
+.site-main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 3rem var(--spacing);
+}
+
+/* ── Typography — Headings ─────────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-brown-dark);
+  line-height: 1.3;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+h1 { font-size: 2rem;   }
+h2 { font-size: 1.65rem; border-bottom: 2px solid var(--color-green-light); padding-bottom: 0.3rem; }
+h3 { font-size: 1.35rem; }
+h4 { font-size: 1.15rem; }
+h5 { font-size: 1rem;    }
+h6 { font-size: 0.9rem;  }
+
+/* ── Typography — Body ─────────────────────────────────────────────────── */
+p {
+  margin-bottom: 1.25rem;
+}
+
+strong {
+  color: var(--color-brown-dark);
+}
+
+em {
+  font-style: italic;
+}
+
+/* ── Links ─────────────────────────────────────────────────────────────── */
+a {
+  color: var(--color-toffee);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--color-brown-dark);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--color-toffee);
+  outline-offset: 2px;
+}
+
+/* ── Lists ─────────────────────────────────────────────────────────────── */
+ul, ol {
+  margin-bottom: 1.25rem;
+  padding-left: 1.75rem;
+}
+
+li {
+  margin-bottom: 0.35rem;
+}
+
+li > ul,
+li > ol {
+  margin-top: 0.35rem;
+  margin-bottom: 0;
+}
+
+/* ── Blockquotes ───────────────────────────────────────────────────────── */
+blockquote {
+  border-left: 4px solid var(--color-green-light);
+  margin: 1.5rem 0;
+  padding: 0.75rem 1.25rem;
+  background-color: rgba(85, 126, 115, 0.08);  /* subtle green tint */
+  color: var(--color-brown-dark);
+  font-style: italic;
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Code ──────────────────────────────────────────────────────────────── */
+code {
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+  background-color: rgba(85, 126, 115, 0.12);  /* light green wash */
+  color: var(--color-brown-dark);
+  padding: 0.15em 0.35em;
+  border-radius: 3px;
+}
+
+pre {
+  margin: 1.5rem 0;
+  padding: 1.25rem;
+  overflow-x: auto;
+  background-color: var(--color-green-dark);
+  color: var(--color-parchment);
+  border-radius: 6px;
+  line-height: 1.5;
+}
+
+pre code {
+  background: none;
+  color: inherit;
+  padding: 0;
+  font-size: 0.88em;
+}
+
+/* ── Horizontal Rules ──────────────────────────────────────────────────── */
+hr {
+  border: none;
+  border-top: 2px solid var(--color-green-light);
+  margin: 2rem 0;
+}
+
+/* ── Images ────────────────────────────────────────────────────────────── */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* ── Tables ────────────────────────────────────────────────────────────── */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+
+th, td {
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(85, 126, 115, 0.3);
+}
+
+th {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--color-brown-dark);
+  border-bottom-width: 2px;
+  border-bottom-color: var(--color-green-light);
+}
+
+/* ── Footer ────────────────────────────────────────────────────────────── */
+.site-footer {
+  background-color: var(--color-green-dark);
+  color: var(--color-parchment);
+  text-align: center;
+  padding: 2rem var(--spacing);
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+
+.footer-content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.footer-tagline {
+  font-style: italic;
+  opacity: 0.75;
+  margin-top: 0.25rem;
+}
+
+/* ── Skip Navigation Link ───────────────────────────────────────────── */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background: var(--color-green-dark);
+  color: var(--color-parchment);
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* ── Responsive — Small Screens ────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .site-title {
+    font-size: 1.8rem;
+  }
+
+  .site-tagline {
+    font-size: 0.95rem;
+  }
+
+  .site-main {
+    padding: 2rem 1rem;
+  }
+
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.35rem; }
+  h3 { font-size: 1.15rem; }
+
+  body {
+    font-size: 1rem;
+  }
+
+  pre {
+    padding: 0.9rem;
+    font-size: 0.85rem;
+  }
+}
