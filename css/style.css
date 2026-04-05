@@ -26,8 +26,8 @@
   --color-pre-text:     #E8E0DA;
   --color-strong:       #FBF7F4;
 
-  --font-body: "Georgia", "Times New Roman", "Palatino Linotype", serif;
-  --font-heading: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Montserrat", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-heading: "Montserrat", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   --font-mono: "SFMono-Regular", "Consolas", "Liberation Mono", "Menlo", monospace;
 
   --max-width: 740px;
