@@ -14,13 +14,13 @@ Humanity is better off when scientific knowledge grows.
 But there is something just as important that is often overlooked: humanity is also better off when the people doing the science grow, too.
 The strength of research does not come solely from the methods, data, or results achieved.
 It also comes from the mindset with which the work is done.
-Research thrives when curiosity and compassion outweigh ego, when questions are welcomed as much as answers, and disagreements spark new ideas rather than diminishing people.
+Research thrives when curiosity and compassion outweigh ego, when questions are welcomed as much as answers, and when disagreements spark new ideas rather than diminishing people.
 
 Your mindset, and the way you treat your peers, has compounding effects on your research and scientific progress.
 Every interaction is an opportunity to build trust and combine knowledge to reach greater heights.
 Prioritize **curiosity over competition** when working with your peers.
 Remember that the goal is to get closer to the truth, not to "win" a discussion or push your ideas to the forefront.
-Practice **active listening** by really considering your peers' words; don't ignore them while rushing to come up with something in response.
+Practice **active listening** by *really* considering your peers' words; don't ignore them while rushing to come up with something in response.
 
 No matter what, **give respect by default**.
 Your peers, your students, your mentors -- everyone you work with -- all deserve respect; they do not need to "earn" it first.
