@@ -1,66 +1,126 @@
 # Labhole
 
+Labhole is a science-ethics advocacy site that promotes ethics, respect, and
+morals in science and research environments. The tagline says it all: *"Don't
+be a labhole. Have morals."*
+
+The site is live at [labhole.github.io](https://labhole.github.io).
+
 ## How It's Built
 
-Labhole is built with [Jekyll](https://jekyllrb.com/), the static site
-generator supported natively by GitHub Pages. Key technical details:
+Labhole is a static site built with [Jekyll](https://jekyllrb.com/) and
+deployed automatically via [GitHub Pages](https://pages.github.com/).
 
 * **Static site generator:** Jekyll
-* **Hosting:** GitHub Pages (deployed automatically from the repository)
+* **Hosting:** GitHub Pages (auto-deployed from the repository)
 * **Markdown processor:** [kramdown](https://kramdown.gettalong.org/) with
     GitHub-Flavored Markdown (GFM) input
-* **Theme:** Fully custom — no remote theme or gem-based theme is used. The
-    layout and styles are defined entirely within the repository.
+* **Theme:** Fully custom dark-mode design — no remote theme or gem-based theme
+    is used. The layout and styles are defined entirely within the repository.
+* **Typography:** [Montserrat](https://fonts.google.com/specimen/Montserrat),
+    self-hosted from `css/fonts/` (not loaded from Google Fonts at runtime)
 * **Dependencies:** Managed through the `github-pages` gem, which pins all
     Jekyll plugins and dependencies to the exact versions used by the GitHub
     Pages build environment.
 
 ## Color Palette
 
-The site uses a five-color palette defined as CSS custom properties in
-`css/style.css`:
+The site uses a dark-mode palette defined as CSS custom properties in
+`css/style.css`. All colors are chosen for readability and AA contrast
+compliance on a dark background.
 
-| Color            | Hex       | Usage                              |
-| ---------------- | --------- | ---------------------------------- |
-| Muted green      | `#557E73` | Header background, accents         |
-| Very dark green  | `#1D1A05` | Body text, footer background       |
-| Very dark brown  | `#211103` | Headings, emphasis, secondary text |
-| Parchment        | `#FBF7F4` | Page background                    |
-| Toffee brown     | `#8F5A30` | Links, interactive elements        |
+| Variable              | Hex       | Semantic Name    | Usage                                        |
+| --------------------- | --------- | ---------------- | -------------------------------------------- |
+| `--color-bg`          | `#211103` | Very dark brown  | Page background                              |
+| `--color-text`        | `#E8E0DA` | Parchment (muted)| Body text                                    |
+| `--color-heading`     | `#659389` | Light green      | Headings                                     |
+| `--color-accent`      | `#557E73` | Muted green      | Borders, horizontal rules, blockquote accent  |
+| `--color-link`        | `#C4793E` | Toffee brown     | Links                                        |
+| `--color-link-hover`  | `#E8E0DA` | Parchment (muted)| Link hover state                             |
+| `--color-code-bg`     | `#2C1E10` | Dark brown       | Inline code background                       |
+| `--color-pre-bg`      | `#1D1A05` | Very dark green  | Code block background                        |
+| `--color-pre-text`    | `#E8E0DA` | Parchment (muted)| Code block text                              |
+| `--color-strong`      | `#FBF7F4` | Parchment (full) | Bold text emphasis                           |
+
+## Typography
+
+The site uses **Montserrat** for both body text and headings. The font files are
+self-hosted under `css/fonts/` — the site does not depend on Google Fonts at
+runtime. Fallback stacks are:
+
+* **Body & Headings:** `"Montserrat", "Segoe UI", "Helvetica Neue", Arial, sans-serif`
+* **Monospace (code):** `"SFMono-Regular", "Consolas", "Liberation Mono", "Menlo", monospace`
 
 ## File Structure
 
 ```
 labhole.github.io/
-├── _config.yml          # Jekyll configuration (title, kramdown, URL settings)
-├── .gitignore           # Git ignore rules (build artifacts, caches)
+├── _config.yml          # Jekyll configuration (site metadata, kramdown, URL settings)
+├── .gitignore           # Git ignore rules (build artifacts, caches, editor swap files)
 ├── Gemfile              # Ruby dependencies (github-pages gem)
+├── Gemfile.lock         # Locked dependency versions
 ├── _layouts/
-│   └── default.html     # HTML5 layout with header, main content, and footer
+│   └── default.html     # HTML5 single-column layout with nav buttons
 ├── css/
-│   └── style.css        # Custom theme stylesheet (5-color palette)
-├── index.md             # Home page (placeholder content)
+│   ├── fonts/           # Self-hosted Montserrat font files (being added)
+│   └── style.css        # Custom dark-mode theme stylesheet
+├── scripts/
+│   └── serve.sh         # One-command local development server script
+├── index.md             # Home page
+├── evaluation.md        # Evaluation page (placeholder)
 └── README.md            # This file
 ```
 
-### Key Files
+## Key Files
 
-* **`_config.yml`** — Defines the site title ("Labhole"), description, kramdown
-    settings, base URL, and files excluded from the build.
-* **`Gemfile`** — Declares the `github-pages` gem as the sole dependency.
-* **`_layouts/default.html`** — The HTML5 page template. Includes a header with
-    the site name and tagline, a centered single-column content area, and a
-    footer.
-* **`css/style.css`** — The complete custom theme. Provides responsive
-    typography (Georgia serif for body, sans-serif for headings), styled
-    elements (blockquotes, code blocks, tables, lists, horizontal rules), and a
-    mobile breakpoint at 600px.
+* **`_config.yml`** — Jekyll configuration. Defines the site title
+    (`labhole.fyi`), tagline, description, kramdown settings with GFM input,
+    base URL for GitHub Pages, `pretty` permalink style, and the list of files
+    excluded from the build.
+* **`Gemfile`** — Declares the `github-pages` gem as the sole Ruby dependency,
+    ensuring local builds match the GitHub Pages environment exactly.
+* **`_layouts/default.html`** — The HTML5 page template. Provides a
+    skip-navigation link for accessibility, a top navigation bar with pill-style
+    nav buttons (Home and Evaluation), and a centered single-column main content
+    area. There is no header banner or footer.
+* **`css/style.css`** — The complete custom dark-mode theme. Defines CSS custom
+    properties for the color palette, Montserrat typography, responsive layout
+    (max width of 740px), styled elements (blockquotes, code blocks, tables,
+    lists, horizontal rules, images), and a mobile breakpoint at 600px.
+* **`css/fonts/`** — Directory for self-hosted Montserrat font files. Font files
+    are in the process of being added.
 * **`index.md`** — The home page, written in Markdown with Jekyll front matter.
-    Currently contains placeholder content about science ethics.
+    Uses the `default` layout.
+* **`evaluation.md`** — The evaluation page. Uses the `default` layout with a
+    `title` of "Evaluation". Currently contains placeholder content.
+* **`scripts/serve.sh`** — A Bash helper script that checks for Ruby and
+    Bundler, installs dependencies into `vendor/bundle`, and starts the Jekyll
+    development server bound to `0.0.0.0` (useful for WSL). Accepts extra
+    arguments such as `--port`.
 
 ## Local Development
 
-To run the site locally, you need **Ruby** and **Bundler** installed.
+To run the site locally, you need **Ruby** (>= 2.7) and **Bundler** installed.
+
+### Quick Start (Recommended)
+
+The `scripts/serve.sh` script handles dependency installation and starts the
+development server in one command:
+
+```sh
+./scripts/serve.sh
+```
+
+To serve on a custom port:
+
+```sh
+./scripts/serve.sh --port 5000
+```
+
+The server binds to `0.0.0.0` by default so it is accessible from a Windows
+host when running inside WSL.
+
+### Manual Setup
 
 1. **Install Ruby** (version 2.7 or later). See the
     [Ruby installation guide](https://www.ruby-lang.org/en/documentation/installation/)
@@ -81,7 +141,7 @@ To run the site locally, you need **Ruby** and **Bundler** installed.
 4. **Start the local development server:**
 
     ```sh
-    bundle exec jekyll serve
+    bundle exec jekyll serve --watch
     ```
 
 5. **Open your browser** and navigate to `http://localhost:4000`.
@@ -111,5 +171,8 @@ To add a new page to the site:
     processor supports standard Markdown as well as GitHub-Flavored Markdown
     extensions (fenced code blocks, tables, etc.).
 
-4. **Access the page** at a URL matching the filename. With the `pretty`
+4. **Add a nav link** by editing `_layouts/default.html` to include a new
+    `<a class="nav-btn">` element in the `<nav>` section.
+
+5. **Access the page** at a URL matching the filename. With the `pretty`
     permalink setting, `about.md` will be served at `/about/`.

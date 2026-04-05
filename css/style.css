@@ -13,6 +13,47 @@
    Very dark green: #1D1A05  — secondary dark (code blocks)
    ========================================================================= */
 
+/* ── Self-Hosted Montserrat Font ──────────────────────────────────────── */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("fonts/montserrat-300.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/montserrat-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("fonts/montserrat-600.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/montserrat-700.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/montserrat-400-italic.woff2") format("woff2");
+}
+
 /* ── CSS Custom Properties ─────────────────────────────────────────────── */
 :root {
   --color-bg:           #211103;
@@ -59,10 +100,36 @@ body {
 }
 
 /* ── Main Content Area ─────────────────────────────────────────────────── */
+.site-nav {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.5rem var(--spacing) 0;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.nav-btn {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text);
+  text-decoration: none;
+  padding: 0.35rem 0.9rem;
+  border: 1px solid var(--color-accent);
+  border-radius: 4px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-btn:hover,
+.nav-btn:focus-visible {
+  background-color: #4A6E63;
+  color: var(--color-strong);
+}
+
 .site-main {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 3rem var(--spacing);
+  padding: 2rem var(--spacing) 3rem;
 }
 
 /* ── Typography — Headings ─────────────────────────────────────────────── */
