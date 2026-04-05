@@ -2,6 +2,6 @@
 layout: default
 ---
 
-# Code of Conduct
+# Mindset
 
 *(Under construction)*

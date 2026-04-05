@@ -214,14 +214,22 @@ li > ol {
 blockquote {
   border-left: 4px solid var(--color-accent);
   margin: 1.5rem 0;
-  padding: 0.75rem 1.25rem;
+  padding: 0.25rem 1.25rem;
   background-color: rgba(85, 126, 115, 0.1);   /* subtle green tint */
   color: var(--color-text);
   font-style: italic;
 }
 
+blockquote p:first-child {
+  margin-top: 0.25rem;
+}
+
+blockquote :first-child {
+  margin-top: 0.25rem;
+}
+
 blockquote p:last-child {
-  margin-bottom: 0;
+  margin-bottom: 0.25rem;
 }
 
 /* ── Code ──────────────────────────────────────────────────────────────── */
