@@ -6,7 +6,7 @@ layout: default
 >
 > `[lab-hohl]`
 >
-> An academic researcher who lifts themselves up by putting others down, operating with the primary motivation of bettering their own position at the cost of worsening humanity's.
+> A scientific researcher who lifts themselves up by putting others down, operating with the primary motivation of bettering their own position at the cost of worsening humanity's.
 
 # Don't be a labhole.
 
