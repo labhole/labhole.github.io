@@ -332,4 +332,131 @@ th {
     padding: 0.9rem;
     font-size: 0.85rem;
   }
+
+  .badge-builder select,
+  .badge-builder input[type="text"] {
+    max-width: 100%;
+  }
+}
+
+/* =========================================================================
+   Badge Builder — Interactive badge generator on the Support page
+   ========================================================================= */
+.badge-builder {
+  margin: 1.5rem 0 2rem;
+}
+
+.badge-builder label {
+  display: block;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-text);
+  margin-bottom: 0.4rem;
+}
+
+.badge-builder select,
+.badge-builder input[type="text"] {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-accent);
+  border-radius: 4px;
+  padding: 0.45rem 0.9rem;
+  width: 100%;
+  max-width: 400px;
+  transition: border-color 0.2s ease;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.badge-builder select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1.5l5 5 5-5' stroke='%23E8E0DA' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  padding-right: 2.25rem;
+  cursor: pointer;
+}
+
+.badge-builder select:focus,
+.badge-builder input[type="text"]:focus {
+  outline: 2px solid transparent;
+  border-color: var(--color-link);
+  box-shadow: 0 0 0 2px rgba(196, 121, 62, 0.25);
+}
+
+.badge-builder select option {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+.badge-builder input[type="text"]::placeholder {
+  color: rgba(232, 224, 218, 0.45);
+}
+
+.badge-builder__custom-input {
+  margin-top: 0.75rem;
+}
+
+.badge-builder__custom-input--hidden {
+  display: none;
+}
+
+.badge-builder__preview {
+  margin-top: 1.5rem;
+}
+
+.badge-builder__preview-label {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-strong);
+  margin-bottom: 0.6rem;
+}
+
+.badge-builder__preview-area {
+  padding: 1.25rem;
+  background-color: var(--color-pre-bg);
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.badge-builder__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.badge-builder__copy-btn {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text);
+  background-color: transparent;
+  border: 1px solid var(--color-accent);
+  border-radius: 4px;
+  padding: 0.45rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  white-space: nowrap;
+}
+
+.badge-builder__copy-btn:hover,
+.badge-builder__copy-btn:focus-visible {
+  background-color: #4A6E63;
+  color: var(--color-strong);
+}
+
+.badge-builder__copy-btn:focus-visible {
+  outline: 2px solid var(--color-link);
+  outline-offset: 2px;
+}
+
+.badge-builder__copy-btn--copied {
+  background-color: var(--color-accent);
+  color: var(--color-strong);
+  border-color: var(--color-accent);
 }
