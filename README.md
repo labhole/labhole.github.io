@@ -84,7 +84,6 @@ labhole.github.io/
 ├── index.md                 # Home page — "Don't be a labhole."
 ├── conduct.md               # Code of Conduct page
 ├── letter.md                # Open Letter page
-├── aspiring_researchers.md  # Aspiring Researchers page
 ├── support.md               # Show Your Support page
 ├── .gitignore               # Git ignore rules (build artifacts, swap files)
 ├── Gemfile                  # Ruby dependencies (github-pages gem)
@@ -122,8 +121,6 @@ labhole.github.io/
 * **`index.md`** — The home page. Uses the `default` layout.
 * **`conduct.md`** — Code of Conduct page. Uses the `default` layout.
 * **`letter.md`** — Open Letter page. Uses the `default` layout.
-* **`aspiring_researchers.md`** — Aspiring Researchers page. Uses the `default`
-    layout.
 * **`support.md`** — Show Your Support page. Uses the `default` layout.
 * **`scripts/serve.sh`** — A Bash helper script that checks for Ruby and
     Bundler, installs dependencies into `vendor/bundle`, and starts the Jekyll
